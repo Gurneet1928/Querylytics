@@ -1,0 +1,273 @@
+/* General body styling */
+body {
+    font-family: 'Poppins', 'Roboto', 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2b2b3d);
+    margin: 0;
+    padding: 0;
+    color: #e0e0e0;
+}
+
+/* Header styling */
+header {
+    background-color: #28293e;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    position: absolute;
+    left: 10px;
+}
+
+.header_text {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Container styling */
+.container {
+    max-width: 100%;
+    padding: 20px;
+}
+
+/* Form group label styling */
+.form-group label {
+    font-weight: bold;
+    color: #a0a0b0;
+}
+
+/* Button styling */
+.btn {
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Plotly container styling */
+#plotly-container {
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #2e2e3e;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #444;
+}
+
+/* Result styling */
+#result {
+    white-space: pre-wrap;
+    font-family: 'Courier New', monospace;
+    display: block;
+    background-color: #2e2e3e;
+    color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Table and result container styling */
+#csvtable, #result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #2e2e3e;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #444;
+}
+
+/* Dynamic table styling */
+#csvtable table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    font-size: 85%;
+    color: #e0e0e0;
+}
+
+#csvtable th, #csvtable td {
+    padding: 10px;
+    border: 1px solid #444;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+#csvtable th {
+    position: sticky;
+    top: 0;
+    background-color: #3a3a4f;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 2;
+}
+
+#csvtable tr:nth-child(even) {
+    background-color: #3a3a4f;
+}
+
+#csvtable tr:hover {
+    background-color: rgba(72, 133, 237, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+#csvtable td {
+    color: #e0e0e0;
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-top: 60px;
+    animation: fadeIn 0.5s;
+}
+
+.modal-content {
+    background-color: #2e2e3e;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #444;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    animation: slideIn 0.5s;
+    color: #e0e0e0;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Loading animation */
+.loading {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    width: 90px;
+    aspect-ratio: 1;
+    --g: conic-gradient(from -90deg at 15px 15px,#6EBE49 90deg,#0000 0);
+    background: var(--g), var(--g), var(--g);
+    background-size: 50% 50%;
+    animation: l19 1.5s infinite;
+  }
+
+@keyframes l19 {
+    0%   {background-position:0     0, 10px 10px, 20px 20px}
+    33%  {background-position:10px  10px}
+    66%  {background-position:0    20px,10px 10px,20px 0   }
+    100% {background-position:0     0, 10px 10px, 20px 20px}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideIn {
+    from {transform: translateY(-50px);}
+    to {transform: translateY(0);}
+}
+
+/* Styling for the send button and input group */
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #444;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #2e2e3e;
+}
+
+#user_prompt {
+    border: none;
+    padding: 10px;
+    flex: 1;
+    background-color: transparent;
+    color: #e0e0e0;
+    font-size: 1rem;
+    outline: none;
+}
+
+#user_prompt::placeholder {
+    color: #a0a0b0;
+}
+
+.input-group-append {
+    display: flex;
+}
+#send-button, .custom-button {
+    border: none;
+    background: linear-gradient(135deg, #3a3a4f, #2e2e3e);
+    color: #e0e0e0;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 2px solid #ffffff;
+}
+
+#send-button:hover, .custom-button:hover {
+    background: linear-gradient(135deg, #444, #3a3a4f);
+    border-color: #ffffff;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+#send-button:active, .custom-button:active {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#send-button i {
+    margin-left: 8px;
+    font-size: 1.2rem;
+}
